@@ -1,0 +1,30 @@
+/* 
+Project   : One Page
+Author   : Enes Kadumi
+Date    : 14/June/2023
+Version: V.1
+*/
+
+/* ################################*/
+/* Root */
+
+/* ################################*/
+/* Common Property */
+
+ *{
+    margin:0;
+    padding: 0px;
+    box-sizing: border-box;
+} 
+
+html{
+    font-size: 15px;
+    line-height: 1.2;
+    
+}
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
