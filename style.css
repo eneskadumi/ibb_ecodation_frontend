@@ -7,6 +7,9 @@ Version: V.1
 
 /* ################################*/
 /* Root */
+:root {
+    --templateBgColor: rgb(41, 41, 41);
+}
 
 /* ################################*/
 /* Common Property */
@@ -115,6 +118,14 @@ i {
     -webkit-line-clamp: 10;
 }
 
+/*#############################################*/
+
+/* Navbar */
+.dark_mode {
+    background-color: var(--templateBgColor);
+    color: white;
+}
+
 /* Header */
 
 header {
@@ -124,6 +135,14 @@ header {
     background-position: 50% 50%;
     z-index: -1;
     /* resimi arkaya gönderir */
-    height: 80vh;
+    height: 90vh;
     padding-top: 4rem;
+}
+
+/* Footer */
+
+footer{
+    min-height: 15rem;
+    width: auto;
+    color: white;
 }

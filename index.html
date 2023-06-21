@@ -26,8 +26,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
 
+  <!-- jquery  -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
   <!-- external CSS -->
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar_id">
@@ -45,31 +50,33 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-solid fa-user text-primary"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Login</a></li>
+              <li><a class="dropdown-item" href="#">Register</a></li>
+            </ul>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Anasayfa</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
+        </ul>
+
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
+            <button class="btn btn-primary" onclick="darkMode()"><i class="fa-solid fa-moon"></i></button>
           </li>
         </ul>
+
         <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
+          <input id="tags" class="form-control me-2" type="search" placeholder="Search..." aria-label="Search">
           <button class="btn btn-primary" type="submit">Ara</button> <!-- btn-outline-success
               -->
         </form>
@@ -94,11 +101,23 @@
 
   <!-- start main codes -->
   <main id="main_id">
+    <section>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ipsum assumenda esse, ea ab, fuga alias, perspiciatis cum veritatis nobis eligendi at non nemo quia unde aperiam repellendus nesciunt amet.
+      Labore laborum dolore, aliquam nisi ea aperiam distinctio excepturi aliquid voluptatem praesentium impedit! Eius labore hic, iure consequuntur ipsam quos est? Illum ducimus accusantium quasi voluptatibus quaerat laborum, iste cum.
+      Dicta harum nemo architecto earum molestiae itaque autem voluptates ullam temporibus dolorem repellendus natus culpa laudantium rerum iure, inventore, veniam facilis odio laboriosam nesciunt blanditiis placeat. Maxime, id! Libero, sit?
+      Sit fuga voluptates qui eius ut omnis assumenda quis tempora. Eos praesentium in doloribus quo repellat iste delectus veniam expedita sint et totam eius ad aut omnis, quisquam mollitia. Voluptatum.
+      Recusandae repellendus perferendis reiciendis repudiandae officiis, culpa et porro id vitae? Vero voluptas aliquid omnis perferendis delectus iusto dicta ex enim quo, quaerat architecto necessitatibus eius nostrum neque at distinctio?
+      Vel harum culpa vitae officia in dolore consequatur nam exercitationem blanditiis ut? Est sed facere velit eum necessitatibus aut. Incidunt necessitatibus cupiditate eos placeat omnis, voluptates commodi fuga est soluta?
+      Optio pariatur itaque sequi cum saepe sint rerum! Numquam, veniam, aliquam odio unde, eius necessitatibus id facere quas cupiditate libero ut. Modi quod sunt, qui laudantium ratione impedit quos provident!
+      Nulla modi dolore doloremque ad nam illo optio vitae corrupti deserunt rem voluptatem eveniet, sequi ea. Officiis quasi laborum consequuntur consectetur neque, iure ad expedita unde quod atque cupiditate. Aperiam!</p>
+    </section>
   </main>
   <!-- end main codes -->
 
   <!-- start footer codes -->
-  <footer id="footer_id"></footer>
+  <footer id="footer_id" class="bg-dark">
+    <div class="text-center p-5" id="copy_right">2021- <span id="date_id"></span> &copy; Bütün Haklar saklıdır</div>
+  </footer>
   <!-- end footer codes -->
 
   <!-- end codes -->
