@@ -70,6 +70,15 @@ i {
 
 }
 
+.myHeading{
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-shadow: 1px 5px rgba(0, 0, 0, 0.2);
+    opacity: 0.8;
+
+}
+
 .fsize1 {
     font-size: 1rem;
     /* 15px = 1rem */
@@ -94,6 +103,14 @@ i {
 /* mLine-clamp */
 
 /* uzun yazıların sadece ilk 5 satırının gösterilmesini sağlar */
+.line-clamp4 {
+    display: -webkit-box;
+    /*çoklu browserlarda çalışmasını sağlar */
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+}
+
 .line-clamp5 {
     display: -webkit-box;
     /*çoklu browserlarda çalışmasını sağlar */
@@ -139,12 +156,24 @@ header {
     padding-top: 4rem;
 }
 
+/* Header */
+#messages{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#messages i{
+    font-size: 2rem;
+}
+
+
+
 /* Footer */
 
 footer{
     min-height: 15rem;
     width: auto;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 
