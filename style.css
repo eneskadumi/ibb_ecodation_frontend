@@ -185,8 +185,27 @@ header {
     background-attachment: fixed;
 }
 
-#parallax h2,p{
+#parallax p{
     color: white;
+}
+#parallax h2{
+    color: white;
+}
+
+/* newspaper */
+#newspaper {
+    height: 35rem;
+    padding: 2rem;
+    }
+
+#newspaper p{
+color: black;
+text-align: justify;
+
+}
+/* blog */
+#blog{
+    background-color: rgb(28, 145, 125);
 }
 
 
