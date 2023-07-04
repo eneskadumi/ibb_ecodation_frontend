@@ -135,6 +135,14 @@ i {
     -webkit-line-clamp: 10;
 }
 
+.line-clamp20 {
+    display: -webkit-box;
+    /*çoklu browserlarda çalışmasını sağlar */
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 20;
+}
+
 /*#############################################*/
 
 /* Navbar */
@@ -156,7 +164,7 @@ header {
     padding-top: 4rem;
 }
 
-/* Header */
+/* Messages */
 #messages{
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -165,6 +173,22 @@ header {
 #messages i{
     font-size: 2rem;
 }
+
+/* Parallax */
+#parallax{
+    background-color: transparent;
+    background-image: url('./img/parallax.jpg');
+    background-size: cover;
+    height: 35rem;
+    padding: 2rem;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#parallax h2,p{
+    color: white;
+}
+
 
 
 
