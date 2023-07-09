@@ -391,7 +391,7 @@ let isOddEven = () => {
     else
         console.log("tektir");
 }
-isOddEven()
+// isOddEven()
 
 // Kullanıcıdan alınan sayıya göre Haftanın günlerini switch-case ile JS code yazınız?
 // Örneğin: kullanıcı 1 girdi: 1=pazartesi yazacak
@@ -426,4 +426,37 @@ let loop3 = () => {
     }
     while (i <= 10);
 }
-loop3();
+// loop3();
+
+//////////////////////////////////////////////////////////////
+// try catch (Error Handling)
+let tryCatchTuto = () => {
+    try {
+        alertx("pop-pup");
+    } catch (error) {
+        console.log("hata mesajı: " + error.message);
+        console.log("hata mesajı: " + error.name);
+        console.error(error);
+    } finally {
+        console.log("db.close");
+        console.log("port.close");
+    }
+    console.log("son satır");
+}
+
+// tryCatchTuto();
+
+////////////////////////////////////////////////////////
+// debug nedir ?
+// 1 ile 10 dahil olmak üzere toplama işlemi yapan JS algoritmasını yazınız 
+
+const debugData = () => {
+    let sum = 0;
+    for (let i = 1; i <= 10; i++) {
+        sum = sum + i;
+    }
+    console.log("Toplam: " + sum);
+}
+debugData()
+
+// return break continue ?
