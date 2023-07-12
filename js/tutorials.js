@@ -610,4 +610,25 @@ const ikinci = (callbackFunction) => {
     console.log(data);
 }
 
-ikinci(birinci)
+// ikinci(birinci)
+
+////////////////////////////////////////////////////////
+
+//promise
+
+const promTutorials = () => {
+    //catch 1 tane olmak zorunda
+    let data = new Promise((resolve, reject) => {
+        let status = 200;
+        if (status == 400)
+            resolve("Çalıştı");
+        else
+            reject("Çalışmadı");
+
+    }).then(
+        () => { console.log("olumlu"); }
+    ).catch(
+        (err) => { console.error(err); }
+    );
+}
+promTutorials()
