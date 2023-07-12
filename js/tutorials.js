@@ -546,22 +546,40 @@ let sumExamplesData = () => {
 // H**** MIZ***
 // ipucu: charAt, substring, indexOf, döngü, karar mekanizma
 
-let usernameAndSurnameMasking = () => {
-    const usernameAndSurname = prompt("Lütfen adınızı ve soyadınızı giriniz");
+// let usernameAndSurnameMasking = () => {
+//     const usernameAndSurname = prompt("Lütfen adınızı ve soyadınızı giriniz");
 
-    const userIndex = usernameAndSurname.indexOf(" ");
-    let username = usernameAndSurname.substring(0, userIndex);
-    for (let i = 1; i < username.length; i++) {
-        username = username.replace(username.charAt(i), "*");
-    }
-    username = username.toUpperCase()
-    console.log(username.toUpperCase());
+//     const userIndex = usernameAndSurname.indexOf(" ");
+//     let username = usernameAndSurname.substring(0, userIndex);
+//     for (let i = 1; i < username.length; i++) {
+//         username = username.replace(username.charAt(i), "*");
+//     }
+//     username = username.toUpperCase()
+//     console.log(username.toUpperCase());
 
-    let surname = usernameAndSurname.substring(userIndex + 1, usernameAndSurname.length).toUpperCase();
-    for (let i = 1; i <= username.length; i++) {
-        surname = surname.replace(surname.charAt(i), "*");
-    }
-    console.log(surname);
-    console.log(username.concat(" ").concat(surname));
+//     let surname = usernameAndSurname.substring(userIndex + 1, usernameAndSurname.length).toUpperCase();
+//     for (let i = 1; i <= username.length; i++) {
+//         surname = surname.replace(surname.charAt(i), "*");
+//     }
+//     console.log(surname);
+//     console.log(username.concat(" ").concat(surname));
+// }
+// usernameAndSurnameMasking();
+
+////////////////////////////////////////////////////////////////////////
+
+// Monad
+
+const birinci = () => {
+    let user = Number(prompt("Lütfens sayı giriniz"));
+    return user;
 }
-usernameAndSurnameMasking();
+
+const ikinci = () => {
+    let data = birinci();
+    console.log(Math.sqrt(data));
+}
+
+// ikinci();
+
+
