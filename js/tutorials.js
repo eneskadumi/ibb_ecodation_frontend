@@ -601,11 +601,13 @@ let sumExamplesData = () => {
 // callbackfunction
 
 const birinci = (data) => {
-    console.log(Math.pow(2, data));
-    return user;
+    return Math.pow(2, data);
 }
 
 const ikinci = (callbackFunction) => {
     let user = Number(prompt("Lütfens sayı giriniz"));
-    callbackFunction(User)
+    let data = callbackFunction(user);
+    console.log(data);
 }
+
+ikinci(birinci)
