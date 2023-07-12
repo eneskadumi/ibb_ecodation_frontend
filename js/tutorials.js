@@ -457,7 +457,7 @@ const debugData = () => {
     }
     console.log("Toplam: " + sum);
 }
-debugData()
+// debugData()
 
 ////////////////////////////////////////////////////////
 // return break continue ?
@@ -582,4 +582,19 @@ const ikinci = () => {
 
 // ikinci();
 
+////////////////////////////////////////////////////////
+
+// setTimeOut(),setInterval()
+
+// Belirli bir zaman sonra tek bir kere çalışır ve durur
+setTimeout(function(){
+    console.log("setTimeout çalıştı");
+},2000);
+
+// Belirli bir zaman çalışır ve sonsuza kadar tekrar eder
+setInterval(function(){
+    console.log("setInterval çalıştı");
+},3000);
+
+////////////////////////////////////////////////////////
 
