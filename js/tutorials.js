@@ -570,15 +570,15 @@ let sumExamplesData = () => {
 
 // Monad
 
-const birinci = () => {
-    let user = Number(prompt("Lütfens sayı giriniz"));
-    return user;
-}
+// const birinci = () => {
+//     let user = Number(prompt("Lütfens sayı giriniz"));
+//     return user;
+// }
 
-const ikinci = () => {
-    let data = birinci();
-    console.log(Math.sqrt(data));
-}
+// const ikinci = () => {
+//     let data = birinci();
+//     console.log(Math.sqrt(data));
+// }
 
 // ikinci();
 
@@ -587,14 +587,25 @@ const ikinci = () => {
 // setTimeOut(),setInterval()
 
 // Belirli bir zaman sonra tek bir kere çalışır ve durur
-setTimeout(function(){
-    console.log("setTimeout çalıştı");
-},2000);
+// setTimeout(function(){
+//     console.log("setTimeout çalıştı");
+// },2000);
 
 // Belirli bir zaman çalışır ve sonsuza kadar tekrar eder
-setInterval(function(){
-    console.log("setInterval çalıştı");
-},3000);
+// setInterval(function(){
+//     console.log("setInterval çalıştı");
+// },3000);
 
 ////////////////////////////////////////////////////////
 
+// callbackfunction
+
+const birinci = (data) => {
+    console.log(Math.pow(2, data));
+    return user;
+}
+
+const ikinci = (callbackFunction) => {
+    let user = Number(prompt("Lütfens sayı giriniz"));
+    callbackFunction(User)
+}
