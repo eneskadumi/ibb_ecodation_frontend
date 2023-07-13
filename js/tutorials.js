@@ -631,4 +631,104 @@ const promTutorials = () => {
         (err) => { console.error(err); }
     );
 }
-promTutorials()
+// promTutorials()
+
+////////////////////////////////////////////////////////
+
+// dizi, Iterative for, for in, for of, forEach, map, filter , fill
+
+let arr = () => {
+    const numbers = [3, 5, 6, "str", true];
+    console.log(numbers);
+}
+arr();
+
+
+// DİZİLERE DEVAM EDİCEZ
+////////////////////////////////////////////////////////
+
+// callback promise örneği
+
+let callbackFunctionComputer = () => {
+
+
+    // dizi objesi içerisinde 5 tane random obje olsun
+    const computerArray = [];
+
+    for (let index = 0; index < 5; index++) {
+
+        let computerObject = {
+            computerName: `computer ${index + 1}`,
+            price: `${index + 1}` * `${Number(100)}`
+        };
+        computerArray.push(computerObject);
+    }
+    console.log(computerArray);
+
+    // bu dizi içindeki sadece computer name bileşenlerini gösterin (Map)
+    const arrayInComputerName = () => {
+        computerArray.map((temp) => {
+            // console.log(`${temp.computerName}`);
+        })
+    }
+    arrayInComputerName();
+
+    // call back function
+    const arrayInComputerObject = (obj, callbackFnc) => {
+        computerArray.push(obj);
+        callbackFnc();
+    }
+
+    arrayInComputerObject({ computerName: "computer 6", price: 600 }, arrayInComputerName)
+
+}
+// callbackFunctionComputer();
+
+
+/////////////////////////////////////////////////////////////////
+// Json nedir ? XML nedir ? arasındaki fark ?
+
+let objecttutorials = () => {
+
+    // object
+    const personObj = {
+        name: "Enes",
+        surname: "Kadumi",
+        number: "21",
+        isLogin: true,
+        software: ["Html5", "Css", "javascript"],
+        fullName: function(){
+            return this.name + " " +this.surname
+        }
+    };
+
+    console.log(personObj);
+
+    //variable
+    console.log(personObj.name);
+    console.log(personObj.surname);
+
+    //variable nested
+    console.log(personObj["name"]);
+    console.log(personObj["surname"]);
+
+    //Array
+    console.log(personObj.software[2]);
+
+    const objectToString = JSON.stringify(personObj);
+    console.log(objectToString);
+
+    const stringToObject = JSON.parse(objectToString);
+    console.log(stringToObject.name);
+
+    // Object variable
+    personObj.language = "english";
+    console.log(personObj.language);
+
+    // function callback
+    console.log(personObj.fullName());
+
+}
+
+objecttutorials();
+
