@@ -641,7 +641,7 @@ let arr = () => {
     const numbers = [3, 5, 6, "str", true];
     console.log(numbers);
 }
-arr();
+// arr();
 
 
 // DİZİLERE DEVAM EDİCEZ
@@ -697,8 +697,8 @@ let objecttutorials = () => {
         number: "21",
         isLogin: true,
         software: ["Html5", "Css", "javascript"],
-        fullName: function(){
-            return this.name + " " +this.surname
+        fullName: function () {
+            return this.name + " " + this.surname
         }
     };
 
@@ -730,5 +730,62 @@ let objecttutorials = () => {
 
 }
 
-objecttutorials();
+//objecttutorials();
 
+// object constructor
+
+let objectConstructor = () => {
+    let personConstructor = function (name, surname) {
+        this.name = name; //obje
+        this.surname = surname; // obje
+        console.log(this); // this komutu objeyi işaret ediyor
+    }
+
+    let personResult = new personConstructor("Enes", "Kadumi")
+    console.log(personResult.name, personResult.surname);
+}
+
+// objectConstructor ();
+
+////////////////////////////////////////////
+// call, apply, bind
+// anonymous function ile arrow function arasındaki farka bakmanızı istiyoruz.
+
+let noParameterCallApplyBind = () => {
+
+    // function
+    let functionOtherObject = function () {
+        document.writeln(`Parametresiz Function: ${this.adi}<br/>`)
+    }
+
+    // object
+    let objectData = {
+        adi: "Spora gidiyorum"
+    }
+
+    functionOtherObject.call(objectData)
+    functionOtherObject.apply(objectData)
+    let deneme = functionOtherObject.bind(objectData);
+    deneme();
+}
+noParameterCallApplyBind();
+document.writeln(`<br/>`)
+
+let parameterCallApplyBind = () => {
+
+    // function
+    let functionOtherObject = function (surname) {
+        document.writeln(`Parametresiz Function: ${this.adi} => ${surname}<br/>`)
+    }
+
+    // object
+    let objectData = {
+        adi: "Spora gidiyorum"
+    }
+
+    functionOtherObject.call(objectData, "Kadumi")
+    functionOtherObject.apply(objectData, ["Kadumi"])
+    let deneme = functionOtherObject.bind(objectData, "Kadumi");
+    deneme();
+}
+parameterCallApplyBind();
