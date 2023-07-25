@@ -798,4 +798,84 @@ let eventFunction = () => {
 }
 
 ///////////////////////////////////////////////////////////////
+// DOM
+
+let newDataDate = () => {
+
+    // let now = document.getElementById("text_data")
+
+    // now.innerHTML = "<b><i><mark>" + new Date().getFullYear() + "</i></b></mark>"
+
+    // now.innerHTML = `<b><i><mark> ${new Date().getFullYear()} </i></b></mark>`
+
+    // QUERYSELECTOR id = # / class = .
+
+    let now = document.querySelector("#text_data")
+
+    // TEXT
+
+    // now.innerText = `<b><i><mark> ${new Date().getFullYear()} </i></b></mark>`
+    now.innerText = `${new Date().getFullYear()}`
+
+
+    // Css
+    now.style.color = "white";
+    now.style.backgroundColor = "purple"
+    now.style.padding = "5rem"
+
+}
+
+
+let domData2 = () => {
+    // alert("domData2")
+
+    // ID
+    // let domUserData = document.getElementById("dom_id").innerText = "ID"
+
+    //class
+    // let domUserData = document.getElementsByClassName("dom_class")[0].innerText = "class"
+
+
+    // Tag name
+    // let domUserData = document.getElementsByTagName("p")[1].innerText = "class"
+
+
+}
+
+//////////////////////////////////////////////////////////
+// Butona tıkladığımızda kullanıcıya soru sorsun
+// farklı bir sayfaya gitmek istermisiniz ?
+// evet farklı bir sayfaya redirect
+// değilse alert versin
+
+let outSite = () => {
+    let userInformation = window.confirm("Farklı bir sayfaya gitmek ister misiniz ?")
+        ? window.location = "https://www.ecodation.com"
+        : window.alert("Bu sayfada kaldınız")
+
+    // if else ile
+
+    // let userInformation = window.confirm("Farklı bir sayfaya gitmek ister misiniz ?")
+
+    // if (userInformation == true) {
+    //     window.location = "https://www.ecodation.com"
+    // }
+    // else
+    //     window.alert("Bu sayfada kaldınız")
+
+}
+
 // listener
+
+let userListener = () => {
+    let listenerParag = document.getElementById("parag_list")
+    listenerParag.addEventListener("click", function (e) {
+        // alert(e.preventDefault + " " + e.target)
+        document.getElementById("log_admin").innerHTML = "takip edildi"
+        // $("#log_admin").html("Takip edildi")
+
+
+
+    })
+}
+userListener()
