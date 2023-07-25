@@ -768,8 +768,8 @@ let noParameterCallApplyBind = () => {
     let deneme = functionOtherObject.bind(objectData);
     deneme();
 }
-noParameterCallApplyBind();
-document.writeln(`<br/>`)
+// noParameterCallApplyBind();
+// document.writeln(`<br/>`)
 
 let parameterCallApplyBind = () => {
 
@@ -788,4 +788,14 @@ let parameterCallApplyBind = () => {
     let deneme = functionOtherObject.bind(objectData, "Kadumi");
     deneme();
 }
-parameterCallApplyBind();
+// parameterCallApplyBind();
+
+///////////////////////////////////////////////////////////////
+// event
+
+let eventFunction = () => {
+    alert("deneme")
+}
+
+///////////////////////////////////////////////////////////////
+// listener
