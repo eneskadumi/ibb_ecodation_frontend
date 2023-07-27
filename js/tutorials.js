@@ -879,3 +879,25 @@ let userListener = () => {
     })
 }
 userListener()
+
+
+////////////////////////////////////////////////////
+
+// LocalStorage
+
+let localStorageData = () => {
+    // const name = localStorage.setItem("name",prompt("Adınızı giriniz"))
+    // const surname = localStorage.setItem("surname",prompt("Soyadınızı giriniz"))
+    // console.log(localStorage)
+
+    const getName = localStorage.getItem("name")
+    alert(getName)
+
+    // RemoveItem
+    // localStorage.removeItem("name")
+    
+    //clear
+    // localStorage.clear()
+
+}
+// localStorageData()
