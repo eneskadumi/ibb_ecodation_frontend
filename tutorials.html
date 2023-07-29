@@ -103,78 +103,71 @@ Log Information : <span id="log_admin"></span> -->
 
 
 
-  <!-- Modal trigger button -->
-  <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#vkiId">
-    VKI
-  </button>
+<!-- Modal trigger button -->
+<button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#vkiId">
+  VKI
+</button>
 
-  <!-- Modal Body -->
-  <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-  <div class="modal fade" id="vkiId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
-    aria-labelledby="modalTitleId" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title text-center display-4">VKI</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action="#" method="get">
-            <div class="container">
-              <div class="row">
+<!-- Modal Body -->
+<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+<div class="modal fade" id="vkiId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+  aria-labelledby="modalTitleId" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center display-4">VKI</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="#" method="get">
+          <div class="container">
+            <div class="row">
 
-                <div class="col-md-2">Kilo</div>
-                <div class="col-md-10 mb-3">
-                  <div class="form-group">
-                    <input id="weight_id" name="weight_id" type="text" class="form-control"
-                      placeholder="Kilonunu Giriniz" required />
-                    <span id="validation_weight" class="text-danger"></span>
-                  </div>
+              <div class="col-md-2">Kilo</div>
+              <div class="col-md-10 mb-3">
+                <div class="form-group">
+                  <input id="weight_id" name="weight_id" type="text" class="form-control" placeholder="Kilonunu Giriniz"
+                    required />
+                  <span id="validation_weight" class="text-danger"></span>
                 </div>
-
-                <div class="col-md-2">Boy</div>
-                <div class="col-md-10 mb-3">
-                  <div class="form-group">
-                    <input id="height_id" name="height_id" type="text" class="form-control" placeholder="Boyunu Giriniz"
-                      required>
-                    <span id="validation_height" class="text-danger"></span>
-                  </div>
-                </div>
-
-                <div class="col-md-2"></div>
-                <div class="col-md-10 mb-3">
-                  <div class="form-group">
-                    <input type="reset" class="btn btn-danger" value="Temizle" />
-                    <button type="submit" class="btn btn-primary" id="vki_submit_id">VKI Hesapla</button>
-                    <button type="button" class="btn btn-success"  onclick="clearLocaleStorageData()" >Local Storage Temizle</button>
-                  </div>
-                </div>
-
-                <!-- RESULT -->
-                <div class="alert alert-primary alert-dismissible fade show" role="alert">
-                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                  <strong>RESULT: <span id="result_number_id"></span> :<span id="result_vki_id"></span>  </strong> 
-                </div>
-                
               </div>
+
+              <div class="col-md-2">Boy</div>
+              <div class="col-md-10 mb-3">
+                <div class="form-group">
+                  <input id="height_id" name="height_id" type="text" class="form-control" placeholder="Boyunu Giriniz"
+                    required>
+                  <span id="validation_height" class="text-danger"></span>
+                </div>
+              </div>
+
+              <div class="col-md-2"></div>
+              <div class="col-md-10 mb-3">
+                <div class="form-group">
+                  <input type="reset" class="btn btn-danger" value="Temizle" />
+                  <button type="submit" class="btn btn-primary" id="vki_submit_id">VKI Hesapla</button>
+                  <button type="button" class="btn btn-success" onclick="clearLocaleStorageData()">Local Storage
+                    Temizle</button>
+                </div>
+              </div>
+
+              <!-- RESULT -->
+              <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                <strong>RESULT: <span id="result_number_id"></span> :<span id="result_vki_id"></span> </strong>
+              </div>
+
             </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-          <button type="button" class="btn btn-primary">Save</button>
-        </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+        <button type="button" class="btn btn-primary">Save</button>
       </div>
     </div>
   </div>
-
-
-<!-- Optional: Place to the bottom of scripts -->
-<script>
-  const myModal = new bootstrap.Modal(document.getElementById('vkiId'), options)
-
-</script>
-
+</div>
 
 <!-- Bootstrap JavaScript Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

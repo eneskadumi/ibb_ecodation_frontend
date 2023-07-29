@@ -951,5 +951,121 @@ let userJqueryKey = () => {
 // submit button
 // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
 
+let vkiFormule = () => {
+    $(document).ready(function () {
+        // EVENT
+        $("#vki_submit_id").click(function (event) {
+
+            // 
+            event.preventDefault();
+
+            // Boy ve Kilo
+            let weight, height, vkiResult;
+
+            // Local Storage
+            let getLocalWeight, getLocalHeight, getLocalVkiNumberResult, getLocalVkiResult;
+
+            // KİLO
+            weight = jQuery.trim($("#weight_id").val());
+            // alert(weight);
+            // validation
+            // eğer input içinde değer varsa hata mesajı silinsin.
+            if (weight == "") {
+                $('#validation_weight').html("Kilosu boş geçilemez");
+            } else if (jQuery.isNumeric(weight) == false) {
+                // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
+                $('#validation_weight').html("Sayı girmelisiniz");
+            } else {
+                // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
+                localStorage.setItem("weight", weight);
+                console.log(localStorage);
+                getLocalWeight = localStorage.getItem("weight");
+                console.log(`Local Weight:  ${getLocalWeight}`);
+                //CAST NUMBER
+                getLocalWeight = Number(getLocalWeight);
+            }
+
+            // BOY DOM
+            height = jQuery.trim(document.getElementById("height_id").value);
+            //alert(height);
+            // validation
+            if (height == "") {
+                $('#validation_height').html("Boy boş geçilemez");
+            } else if ($.isNumeric(weight) == false) {
+                // Kullanıcı Sayı girmezse sayı girmediniz hatasını versin (REGEX)
+                $('#validation_weight').html("Sayı girmelisiniz");
+            } else {
+                // LocalStorage => // NOT: Kilo(weight), Boy(height), formül sonucu(formulaResult) ve Sonuç(result) LocalStorage olarak saklansın.
+                localStorage.setItem("height", height);
+                console.log(localStorage);
+                getLocalHeight = localStorage.getItem("height");
+                console.log(`Local Height:  ${getLocalHeight}`);
+                //CAST NUMBER
+                getLocalHeight = Number(getLocalHeight);
+            }
+            // eğer input içinde değer varsa hata mesajı silinsin.
+
+            // FORMULE
+            // Kullanıcıdan alınan Kilo ve Boy verileri formda inputtan aldıktan sonra
+            // Formül: Kilo/((Boy)/100)^2
+            vkiResult = Math.round(getLocalWeight / Math.pow((getLocalHeight / 100), 2));
+
+            // Local
+            localStorage.setItem("vki_number_result", vkiResult);
+            getLocalVkiNumberResult = localStorage.getItem("vki_number_result");
 
 
+            // eğer bu formülde;
+            // 18>X     çıkarsa: Düşük Kilolu (Doktora gidiniz)
+            // 18<=X<24 çıkarsa: Normal Kilolu
+            // 24<=X<29 çıkarsa: Fazla Kilolu
+            // 29<=X<32 çıkarsa: Obez Kilolu
+            // X>=32    çıkarsa: Aşırı Obez Kilolu (Doktora gidiniz)
+            // DISPLAY RESULT
+            //$('#result_number_id').html(getLocalVkiNumberResult).css("color","blue");
+
+            // switch-case
+            if (getLocalVkiNumberResult < 18) {
+                $("#result_vki_id").html(`<b><i>${getLocalVkiNumberResult}:Düşük Kilolu </i></b>`);
+                localStorage.setItem("vki_result", "düşük kilolu");
+            } else if (18 <= getLocalVkiNumberResult && getLocalVkiNumberResult < 24) {
+                $("#result_vki_id").html(`<b><i>${getLocalVkiNumberResult}:Normal Kilolu </i></b>`);
+                localStorage.setItem("vki_result", "Normal kilolu");
+            } else if (24 <= getLocalVkiNumberResult && getLocalVkiNumberResult < 29) {
+                $("#result_vki_id").html(`<b><i>${getLocalVkiNumberResult}:Fazla Kilolu </i></b>`);
+                localStorage.setItem("vki_result", "Fazla kilolu");
+            } else if (29 <= getLocalVkiNumberResult && getLocalVkiNumberResult < 32) {
+                $("#result_vki_id").html(`<b><i>${getLocalVkiNumberResult}:Obez Kilolu </i></b>`);
+                localStorage.setItem("vki_result", "Obez kilolu");
+            } else if (getLocalVkiNumberResult >= 32) {
+                $("#result_vki_id").html(`<b><i>${getLocalVkiNumberResult}:Aşırı Obez Kilolu (Doktora gidiniz) </i></b>`);
+                localStorage.setItem("vki_result", "Aşırı Obez kilolu");
+            } else {
+                $("#result_vki_id").html(`<b><i>${getLocalVkiNumberResult}:Sen insan değilsin :) </i></b>`);
+                localStorage.setItem("vki_result", "Sen insan değilsin");
+            }
+
+            // Local
+            getLocalVkiResult = localStorage.getItem("vki_result");
+
+            // Local Storage Temizle
+
+        }); // click
+    }) // end document ready
+};
+vkiFormule();
+
+
+// LocalStorage Cleaner
+let clearLocaleStorageData=()=>{
+    //alert("Silinecek")
+    if(window.confirm("Local Storage'ı silmek istediğinizden emin misiniz ?")){
+        localStorage.clear();
+       alert("silindi");
+    }else{
+        alert("Silinmedi !!!");
+    }
+}
+// $(function () {
+    //$("#vki_hesapla").on("click", function () {
+//}});
