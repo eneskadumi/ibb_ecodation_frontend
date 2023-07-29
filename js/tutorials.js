@@ -878,7 +878,7 @@ let userListener = () => {
 
     })
 }
-userListener()
+// userListener()
 
 
 ////////////////////////////////////////////////////
@@ -895,9 +895,40 @@ let localStorageData = () => {
 
     // RemoveItem
     // localStorage.removeItem("name")
-    
+
     //clear
     // localStorage.clear()
 
 }
 // localStorageData()
+
+/////////////////////////////////////////////////////////////////////
+// Jquery hangi tuşa bastım bana söylesin
+
+let userJqueryKey = () => {
+
+    // Jquery hazırlanması 
+    $(document).ready(function () {
+
+        $(document).keydown(function (userButton) {
+
+            console.log(userButton)
+            console.log(userButton.keyCode);
+            // keyCode (13) => ENTER 
+
+            // Browser sen birşey yapma, yaparsam ben yaparım
+            userButton.preventDefault()
+
+            // ENTER BASILDI
+            if (userButton.keyCode == 13) {
+                alert("ENTER Bastınız")
+            }
+
+
+
+        }) // end keydown
+
+    }) // end document.ready
+
+} // end userJqueryKey
+userJqueryKey()
